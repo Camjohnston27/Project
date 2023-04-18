@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<h1> Welcome Adventurer {{session['user_name']}}!!! </h1>
+
+<body>
+    <a style="padding-top:30px; padding-left:1200px; padding-top:55px;" href="/dashboard">Home</a> <a
+        href="/logout">Logout</a>
+    </h1 class="text-center;" style="padding-top:150px; padding-left:150px" class="col-6 mx-auto">
+    </h1>
+    <div>
+        <h1>Your Character:</h1>
+        <div>
+            <div><h3>First Name: {{character.first_name}}</h3></div>
+            <div><h3>Last Name: {{character.last_name}}</h3></div>
+            <div><h3>Race: {{character.race}}</h3></div>
+            <div><h3>Age: {{character.age}}</h3></div>
+            <div><h3>Sex: {{character.sex}}</h3></div>
+            <div><h3>Strength Made: {{character.strength}}</h3></div>
+            <div><h3>Intelligence: {{character.intelligence}}</h3></div>
+            <div><h3>Wisdom: {{character.wisdom}}</h3></div>
+            <div><h3>Dexterity: {{character.dexterity}}</h3></div>
+            <div><h3>Background Story: {{character.background_story}}</h3></div>
+        </div>
+</body>
+
+</html>

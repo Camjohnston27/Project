@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./static/create.css">
+    <title>Document</title>
+</head>
+<div>
+    <h3>
+        <a style="color:black"  href="/dashboard">Home</a>
+        <a style="color:black"  href="/logout">Logout</a>
+        </h3>
+    <h1>Creating a Mage</h1>
+</div>
+<body>
+    <div>
+        <h1>Character Info</h1>
+    <form action="/createcharacter" method="post" class="createform">
+    <input type="hidden" name="user_id" value="{{session['user_id']}}">
+    <label for="first_name">First Name:</label>
+    <input class="form-control" type="text" placeholder="" name="first_name" aria-label="default input example">
+    <label for="last_name">Last Name: </label>
+    <input class="form-control" type="text" placeholder="" name="last_name" aria-label="default input example">
+    <label for="race">Race:</label>
+    <input class="form-control" type="text" placeholder="" name="race" aria-label="default input example">
+    <label for="age">Age:</label>
+    <input class="form-control" type="text" placeholder="" name="age" aria-label="default input example">
+    <label for="sex">Sex:</label>
+    <input class="form-control" type="text" placeholder="" name="sex" aria-label="default input example">
+    </div>
+    <div class="createform">
+        <h1>Attributes</h1>
+    <label for="strength">Strength:</label>
+    <input class="form-control" type="text" placeholder="" name="strength" aria-label="default input example">
+    <label for="intelligence">Intelligence:</label>
+    <input class="form-control" type="text" placeholder="" name="intelligence" aria-label="default input example">
+    <label for="wisdom">Wisdom:</label>
+    <input class="form-control" type="text" placeholder="" name="wisdom" aria-label="default input example">
+    <label for="dexterity">Dexterity:</label>
+    <input class="form-control" type="text" placeholder="" name="dexterity" aria-label="default input example">
+    <label for="background_story">Background Story:</label>
+    <input class="form-control" type="text" placeholder="" name="background_story" aria-label="default input example">
+    <input type="submit" value="Create">
+    </div>
+    
+    
+    {% with messages = get_flashed_messages() %}    
+    {% if messages %}                        
+        {% for message in messages %}     
+            <p>{{message}}</p>          
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+</form>
+</body>
+</html>
+
+</html>
+</body>
+</html>
